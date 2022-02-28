@@ -1,34 +1,34 @@
 <template>
   <div class="home">
-    <div class="image">
-      <h2>Image</h2>
+    <div class="home__image">
+      <image-field></image-field>
     </div>
-    <div class="message">
-      <h2>Message</h2>
-      <p>samplesamplesamplesamplesamplesamplesample</p>
+    <div class="home__message">
+      <message-field></message-field>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import ImageField from "../components/ImageField.vue";
+import MessageField from "../components/MessageField.vue";
 
 export default defineComponent({
   name: "HomeView",
-  components: {},
+  components: {
+    "image-field": ImageField,
+    "message-field": MessageField,
+  },
 });
 </script>
 
 <style scoped>
-.image {
-  height: 300px;
-  width: 300px;
-  border: solid 5px;
+.home__image {
+  text-align: center;
 }
 
-.message {
-  height: 300px;
-  width: 300px;
-  border: solid 5px;
+.home__message {
+  text-align: center;
 }
 </style>
