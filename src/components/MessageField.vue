@@ -1,7 +1,9 @@
 <template>
   <div class="message">
     <h2>Message</h2>
-    <p>sample message</p>
+    <div class="message__text">
+      <p>sample message sample message sample message</p>
+    </div>
   </div>
 </template>
 
@@ -20,5 +22,10 @@ export default defineComponent({
   width: 300px;
   border: solid 5px;
   display: inline-block;
+  padding: 20px;
+}
+
+.message__text {
+  overflow-wrap: break-word;
 }
 </style>

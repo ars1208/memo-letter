@@ -19,5 +19,6 @@ export default defineComponent({
   width: 300px;
   border: solid 5px;
   display: inline-block;
+  padding: 20px;
 }
 </style>
