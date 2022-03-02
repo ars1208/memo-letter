@@ -1,6 +1,6 @@
 <template>
   <div class="image">
-    <h2>Image</h2>
+    <img src="../assets/logo.png" alt="sample" />
   </div>
 </template>
 
@@ -20,5 +20,11 @@ export default defineComponent({
   border: solid 5px;
   display: inline-block;
   padding: 20px;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 </style>
