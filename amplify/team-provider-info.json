@@ -10,6 +10,11 @@
       "StackName": "amplify-memoletter-dev-223302",
       "StackId": "arn:aws:cloudformation:ap-northeast-1:552434668195:stack/amplify-memoletter-dev-223302/06c31290-e4d4-11ec-8653-0e41d64d860f",
       "AmplifyAppId": "d11inp1b3z5uri"
+    },
+    "categories": {
+      "auth": {
+        "memoletter795a8ca3": {}
+      }
     }
   }
 }
