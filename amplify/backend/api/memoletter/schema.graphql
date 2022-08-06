@@ -8,8 +8,8 @@ type User
 
 type Letter
   @model
-  @auth(rules: [{ allow: owner }]) {
-  @key(name: "byUser", fields: ["userId"])
+  @auth(rules: [{ allow: owner }])
+  @key(name: "byUser", fields: ["userId"]) {
   id: ID!
   name: String!
   userId: ID!
