@@ -1,0 +1,14 @@
+{
+  "resourceName": "s301bb0ca0",
+  "policyUUID": "01bb0ca0",
+  "bucketName": "memoletter7be41e1f4a2344baa6f83e3e6aefc278",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

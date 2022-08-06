@@ -28,5 +28,11 @@ export type AmplifyDependentResourcesAttributes = {
             "CloudFrontSecureURL": "string",
             "CloudFrontOriginAccessIdentity": "string"
         }
+    },
+    "storage": {
+        "s301bb0ca0": {
+            "BucketName": "string",
+            "Region": "string"
+        }
     }
 }
