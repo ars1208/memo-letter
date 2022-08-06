@@ -1,17 +1,14 @@
-type User
-  @model
+type User @model
   @auth(rules: [{ allow: owner }]) {
   id: ID!
   name: String!
-  letter: [Letter] @connection(keyName: "byUser", fields: ["id"])
+  letter: [Letter] @hasMany
 }
 
 type Letter
   @model
-  @auth(rules: [{ allow: owner }])
-  @key(name: "byUser", fields: ["userId"]) {
+  @auth(rules: [{ allow: owner }]) {
   id: ID!
   name: String!
   userId: ID!
-  user: User @connection(fields: ["userId"])
 }
