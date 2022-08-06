@@ -1,7 +1,6 @@
 <template>
-  <div class="login">
-    <h1>ログインページ</h1>
-    <amplify-authenticator></amplify-authenticator>
+  <div class="letter">
+    <h1>レターページ</h1>
   </div>
 </template>
 
@@ -9,7 +8,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "LogIn",
+  name: "LetterView",
   components: {},
 });
 </script>

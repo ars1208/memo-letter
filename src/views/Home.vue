@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <h1>ホーム画面</h1>
     <div class="home__image">
       <image-field></image-field>
     </div>
