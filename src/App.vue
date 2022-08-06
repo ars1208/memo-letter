@@ -1,7 +1,21 @@
 <template>
-  <amplify-greetings></amplify-greetings>
+  <div v-if="inLoggedIn">
+    <amplify-greetings></amplify-greetings>
+  </div>
   <router-view />
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  computed: {
+    inLoggedIn() {
+      return this.$store.state.user !== null;
+    },
+  },
+});
+</script>
 
 <style>
 #app {
