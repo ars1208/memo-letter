@@ -25,4 +25,8 @@ export default defineComponent({
   text-align: center;
   color: #2c3e50;
 }
+
+body {
+  background-color: #fdf6f6;
+}
 </style>
