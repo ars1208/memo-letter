@@ -2,7 +2,7 @@
   <div class="message">
     <h2>Message</h2>
     <div class="message__text">
-      <p>sample message sample message sample message</p>
+      <p>サンプルメッセージ、サンプルメッセージ、サンプルメッセージ</p>
     </div>
   </div>
 </template>
@@ -18,8 +18,8 @@ export default defineComponent({
 
 <style scoped>
 .message {
-  height: 300px;
-  width: 300px;
+  height: 400px;
+  width: 400px;
   border: solid 5px;
   display: inline-block;
   padding: 20px;
