@@ -1,21 +1,10 @@
 <template>
-  <div v-if="inLoggedIn">
-    <amplify-greetings></amplify-greetings>
-  </div>
+  <nav>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link>
+  </nav>
   <router-view />
 </template>
-
-<script lang="ts">
-import { defineComponent } from "vue";
-
-export default defineComponent({
-  computed: {
-    inLoggedIn() {
-      return this.$store.state.user !== null;
-    },
-  },
-});
-</script>
 
 <style>
 #app {
@@ -26,7 +15,16 @@ export default defineComponent({
   color: #2c3e50;
 }
 
-body {
-  background-color: #fdf6f6;
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
