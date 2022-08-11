@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import LogIn from "../views/LogIn.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -11,6 +12,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/memo-letter",
     name: "home",
     component: HomeView,
+  },
+  {
+    path: "/memo-letter/login",
+    name: "login",
+    component: LogIn,
   },
   {
     path: "/memo-letter/about",
