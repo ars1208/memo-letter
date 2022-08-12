@@ -10,6 +10,9 @@
         <label for="password">パスワード</label>
         <input type="password" />
       </div>
+      <div class="login__form_input">
+        <button @click="login()">ログイン</button>
+      </div>
     </form>
   </div>
 </template>
