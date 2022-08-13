@@ -9,17 +9,12 @@ const routes: Array<RouteRecordRaw> = [
     component: HomeView,
   },
   {
-    path: "/memo-letter",
-    name: "home",
-    component: HomeView,
-  },
-  {
-    path: "/memo-letter/login",
+    path: "/login",
     name: "login",
     component: LogIn,
   },
   {
-    path: "/memo-letter/about",
+    path: "/about",
     name: "about",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
