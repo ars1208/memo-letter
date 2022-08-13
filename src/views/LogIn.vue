@@ -1,17 +1,17 @@
 <template>
   <div class="login">
     <h1>ログインページ</h1>
-    <form class="login__form">
+    <form class="login__form" v-on:submit.prevent="doLogin">
       <div class="login__form_input">
-        <label for="userId">ユーザーID</label>
-        <input type="text" />
+        <label>ユーザーID</label>
+        <input type="text" placeholder="ユーザーID" />
       </div>
       <div class="login__form_input">
-        <label for="password">パスワード</label>
-        <input type="password" />
+        <label>パスワード</label>
+        <input type="password" placeholder="パスワード" />
       </div>
       <div class="login__form_input">
-        <button @click="login()">ログイン</button>
+        <button type="submit">ログイン</button>
       </div>
     </form>
   </div>
@@ -22,5 +22,19 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "LogIn",
+  data() {
+    return {
+      user: {},
+    };
+  },
+  methods: {
+    doLogin() {
+      // TODO: ログイン機能を実装
+      this.$store.dispatch("auth", {
+        userId: this.user.userId,
+        userToken: "dummy token",
+      });
+    },
+  },
 });
 </script>
