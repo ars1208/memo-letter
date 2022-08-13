@@ -1,9 +1,21 @@
-import { createStore } from "vuex";
+import Vuex from "vuex";
 
-export default createStore({
-  state: {},
-  getters: {},
-  mutations: {},
-  actions: {},
-  modules: {},
+const store = new Vuex.Store({
+  state: {
+    userId: "",
+    userToken: "",
+  },
+  mutations: {
+    updateUser(state, user) {
+      state.userId = user.userId;
+      state.userToken = user.userToken;
+    },
+  },
+  actions: {
+    auth(context, user) {
+      context.commit("updateUser", user);
+    },
+  },
 });
+
+export default store;
