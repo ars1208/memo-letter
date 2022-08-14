@@ -34,6 +34,7 @@ export default defineComponent({
         userId: this.user.userId,
         userToken: "dummy token",
       });
+      this.$router.push(this.$route.query.redirect);
     },
   },
 });
