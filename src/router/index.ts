@@ -4,17 +4,17 @@ import LogIn from "../views/LogIn.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: "/",
+    path: "/memo-letter",
     name: "home",
     component: HomeView,
   },
   {
-    path: "/login",
+    path: "/memo-letter/login",
     name: "login",
     component: LogIn,
   },
   {
-    path: "/about",
+    path: "/memo-letter/about",
     name: "about",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
