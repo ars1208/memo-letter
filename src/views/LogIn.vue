@@ -4,11 +4,15 @@
     <form class="login__form" v-on:submit.prevent="doLogin">
       <div class="login__form_input">
         <label>ユーザーID</label>
-        <input type="text" placeholder="ユーザーID" />
+        <input type="text" placeholder="ユーザーID" v-model="user.userId" />
       </div>
       <div class="login__form_input">
         <label>パスワード</label>
-        <input type="password" placeholder="パスワード" />
+        <input
+          type="password"
+          placeholder="パスワード"
+          v-model="user.password"
+        />
       </div>
       <div class="login__form_input">
         <button type="submit">ログイン</button>
@@ -29,7 +33,6 @@ export default defineComponent({
   },
   methods: {
     doLogin() {
-      // TODO: ログイン機能を実装
       this.$store.dispatch("auth", {
         userId: this.user.userId,
         userToken: "dummy token",
