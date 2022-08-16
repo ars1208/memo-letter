@@ -20,7 +20,7 @@ const routes: Array<RouteRecordRaw> = [
     path: "/memo-letter/about",
     name: "about",
     component: About,
-    meta: { requireAuth: true },
+    meta: { requiresAuth: true },
   },
 ];
 
