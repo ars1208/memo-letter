@@ -2,6 +2,6 @@ import axios from "@/api/index";
 
 export default {
   testGetting() {
-    return axios().get("/login");
+    return axios().get("/show");
   },
 };

@@ -35,11 +35,12 @@ export default defineComponent({
     doLogin() {
       const body = { userId: this.userId, password: this.password };
       this.axios.post("/login", body).then((res) => {
-        this.$store.dispatch("auth", {
+        console.log(res);
+        /* this.$store.dispatch("auth", {
           userId: res.body.userId,
           userToken: res.body.userToken,
-        });
-        this.$router.push(this.$route.query.redirect);
+        }); */
+        // this.$router.push(this.$route.query.redirect);
       });
     },
   },

@@ -2,6 +2,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import LogIn from "../views/LogIn.vue";
 import About from "../views/AboutView.vue";
+import Message from "../views/MessageView.vue";
 
 import store from "@/store";
 
@@ -21,6 +22,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "about",
     component: About,
     meta: { requiresAuth: true },
+  },
+  {
+    path: "/memo-letter/message",
+    name: "message",
+    component: Message,
   },
 ];
 
