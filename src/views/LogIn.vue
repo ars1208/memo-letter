@@ -23,6 +23,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import axios from "axios";
 
 export default defineComponent({
   name: "LogIn",
@@ -34,7 +35,7 @@ export default defineComponent({
   methods: {
     doLogin() {
       const body = { userId: this.userId, password: this.password };
-      this.axios.post("/login", body).then((res) => {
+      axios.post("/login", body).then((res) => {
         console.log(res);
         /* this.$store.dispatch("auth", {
           userId: res.body.userId,
