@@ -34,7 +34,7 @@ export default defineComponent({
   },
   methods: {
     doLogin() {
-      const body = { userId: this.userId, password: this.password };
+      const body = { userId: this.user.userId, password: this.user.password };
       axios.post("/login", body).then((res) => {
         console.log(res);
         /* this.$store.dispatch("auth", {
