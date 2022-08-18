@@ -1,7 +1,7 @@
 <template>
   <div class="login">
     <h1>ログインページ</h1>
-    <form class="login__form" v-on:submit.prevent="login">
+    <form class="login__form">
       <div class="login__form_input">
         <label>ユーザーID</label>
         <input type="text" placeholder="ユーザーID" v-model="user.userId" />
@@ -15,7 +15,7 @@
         />
       </div>
       <div class="login__form_input">
-        <button type="submit">ログイン</button>
+        <button type="submit" @click="login">ログイン</button>
       </div>
     </form>
   </div>
