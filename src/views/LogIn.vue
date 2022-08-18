@@ -23,7 +23,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import axios from "@/api/index";
+import Methods from "@/api/methods";
 
 export default defineComponent({
   name: "LogIn",
@@ -33,18 +33,12 @@ export default defineComponent({
     };
   },
   methods: {
-    doLogin() {
-      const body = { userId: this.user.userId, password: this.user.password };
-      axios()
-        .post("/login", body)
-        .then((res) => {
-          console.log(res);
-          /* this.$store.dispatch("auth", {
-            userId: res.body.userId,
-            userToken: res.body.userToken,
-          }); */
-          // this.$router.push(this.$route.query.redirect);
-        });
+    async login() {
+      let response = await Methods.doLogin(
+        this.user.userId,
+        this.user.password
+      );
+      console.log(response);
     },
   },
 });
