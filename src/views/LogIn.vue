@@ -35,14 +35,16 @@ export default defineComponent({
   methods: {
     doLogin() {
       const body = { userId: this.user.userId, password: this.user.password };
-      axios().post("/login", body).then((res) => {
-        console.log(res);
-        /* this.$store.dispatch("auth", {
-          userId: res.body.userId,
-          userToken: res.body.userToken,
-        }); */
-        // this.$router.push(this.$route.query.redirect);
-      });
+      axios()
+        .post("/login", body)
+        .then((res) => {
+          console.log(res);
+          /* this.$store.dispatch("auth", {
+            userId: res.body.userId,
+            userToken: res.body.userToken,
+          }); */
+          // this.$router.push(this.$route.query.redirect);
+        });
     },
   },
 });
