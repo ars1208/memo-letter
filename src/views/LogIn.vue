@@ -33,11 +33,15 @@ export default defineComponent({
   },
   methods: {
     doLogin() {
-      this.$store.dispatch("auth", {
-        userId: this.user.userId,
-        userToken: "dummy token",
+      const body = { userId: this.userId, password: this.password };
+      this.axios.post("/login", body).then((res) => {
+        console.log(res);
+        /* this.$store.dispatch("auth", {
+          userId: res.body.userId,
+          userToken: res.body.userToken,
+        }); */
+        // this.$router.push(this.$route.query.redirect);
       });
-      this.$router.push(this.$route.query.redirect);
     },
   },
 });

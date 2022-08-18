@@ -2,7 +2,8 @@
   <nav>
     <router-link to="/memo-letter">Home</router-link> |
     <router-link to="/memo-letter/about">About</router-link> |
-    <router-link to="/memo-letter/login">Login</router-link>
+    <router-link to="/memo-letter/login">Login</router-link> |
+    <router-link to="/memo-letter/message">Message</router-link>
   </nav>
   <router-view />
 </template>
